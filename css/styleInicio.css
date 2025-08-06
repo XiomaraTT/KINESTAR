@@ -1,0 +1,828 @@
+/* ======================
+    ESTILOS GENERALES
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font: normal 1rem 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    transition: background-color 0.4s ease-in-out;
+}
+
+/* ======================
+    BARRA DE NAVEGACIÓN SUPERIOR
+====================== */
+
+.carrusel {
+  position: relative;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.imagenes {
+  display: flex;
+  min-height: 100%;
+  max-height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.imagenes img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1;
+  max-width: 30px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+nav {
+  background-color: #014034;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.logo img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.menu {
+  display: flex;
+  margin: 0 ;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  position: relative;
+  margin: 0 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+  display: block;
+}
+
+.nav-superior {
+ display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  gap: 20px;               /* Espacio entre el botón y el menú (ajustable) */
+  padding: 10px;           /* Espaciado interno  */
+}
+
+.menu a:hover {
+  color: #F0D98C;
+  text-shadow: 0 0 6px rgba(240, 217, 140, 0.5);
+}
+
+.menu a.active {
+  border-bottom: 2px solid #efefef;
+}
+
+/* ======================
+    SUBMENÚ DESPLEGABLE
+====================== */
+.submenu-hover {
+  position: relative;
+}
+
+.submenu-hover > a {
+  display: inline-block;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #014034;
+  padding: 10px 0;
+  min-width: 180px;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.submenu li a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu-hover:hover .submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ======================
+    ICONO DE USUARIO
+====================== */
+.icono-usuario {
+  height: 30px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+/* ======================
+    IMAGEN PRINCIPAL HERO
+====================== */
+.hero-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* ================================
+    SECCIÓN: EXPERIENCIAS DE CINE
+================================ */
+.experiencias-cine {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  background-color: #F0D98C;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.tipo-experiencia {
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.tipo-experiencia:last-child {
+  margin-bottom: 0;
+}
+
+.tipo-experiencia:hover {
+  transform: translateY(-5px);
+}
+
+.tipo-experiencia h2 {
+  color: #013220;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.tipo-experiencia h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background-color: #013220;
+  bottom: -8px;
+  left: 25%;
+}
+
+.tipo-experiencia img {
+  width: 100%;
+  max-width: 300px;
+  min-height: 180px;
+  max-height: 180px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0.75;
+}
+
+.tipo-experiencia p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1em;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.separador {
+  width: 80%;
+  height: 2px;
+  background-color: #013220;
+  margin: 20px auto;
+}
+
+
+/* ================================
+SECCIÓN: PROMOCIONES Y COMBOS
+================================ */
+.estructura {
+    display: flex; 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 20px auto; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.promociones {
+    flex: 3.5; 
+    min-width: 450px; 
+    background-color: rgb(255, 240, 212);
+    border-radius: 20px;
+    display: flex; 
+    flex-direction: column;
+    padding: 45px 25px;
+    margin: 0; 
+    box-sizing: border-box;
+    margin-bottom: 30px; 
+}
+
+.sectorC {
+    flex: 1; 
+    min-width: 280px; 
+    background-color: rgb(255, 240, 212);
+    border-radius: 20px;
+    display: flex; 
+    flex-direction: column;
+    padding: 45px 25px;
+    margin: 0; 
+    text-align: center;
+    align-items: center; 
+    box-sizing: border-box;
+    margin-bottom: 30px; 
+}
+
+/* ================================
+GALERÍA DE PELÍCULAS
+================================ */
+
+.cuadroDeImagenes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 40px 0;
+  width: 100%;
+  align-items: center;
+}
+
+.division1,
+.division2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  background-color: #740d00b6;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.pelis {
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
+.pelis img {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover; 
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.peliculas {
+    max-height: 500px;
+    margin: 20px 0; 
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    flex-grow: 1;
+}
+
+.pelicula {
+    background-color: #fafafa;
+    border-radius: 10px;
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 8px;
+    min-width: 260px;
+    max-height: 100%;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0 15px 10px; 
+}
+
+.info a {
+    text-decoration: none;
+    color: #013220;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.estrellas {
+    font-size: 18px;
+    color: gold;
+}
+
+.pelicula img {
+    min-width: 100%;
+    min-height: 120%; 
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; 
+    display: block;
+}
+
+/* ================================
+COMBOS ESPECIALES
+================================ */
+
+.combos {
+    max-height: 1100px;
+    width: 100%; 
+    padding: 20px;
+    background-color: #a3831a;
+    border-radius: 20px;
+    margin: 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.tCombo {
+    text-align: center;
+}
+
+.list a {
+    font-size: 25px;
+    color: #ffe2c7;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 5px 0;
+}
+
+h4 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #013220;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.combos img {
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list:hover {
+    transform: scale(1.05); 
+}
+
+.pelis:hover {
+    transform: scale(1.05); 
+}
+
+/* ======================
+   PIE DE PAGINA
+====================== */
+footer {
+  background-color: #014034; /* Verde esmeralda oscuro */
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  transition: background-color 0.4s ease;
+}
+
+.footer-contenedor {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-redes {
+  margin-top: 1rem;
+}
+
+.footer-redes a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-redes img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.footer-redes a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s, text-decoration 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ================================
+VENTANAS MODALES
+================================ */
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: fadeIn 0.4s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+.modal-content h2 {
+  margin-top: 0;
+  color: #014034;
+}
+
+.modal-content p,
+.modal-content ul {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.modal-content ul {
+  padding-left: 1.2rem;
+}
+
+.modal-content li {
+  margin-bottom: 8px;
+}
+
+/* Botones dentro del modal */
+
+.modal-buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-buttons button:first-child {
+  background-color: #014034;
+  color: #fff;
+}
+
+.modal-buttons button:last-child {
+  background-color: #ccc;
+  color: #333;
+}
+
+.modal-buttons button:hover:first-child {
+  background-color: #016b50;
+}
+
+.modal-buttons button:hover:last-child {
+  background-color: #bbb;
+}
+/* Botón cerrar */
+.close {
+  color: #888;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* ======================
+   ANIMACIONES footer
+====================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ======================
+RESPONSIVE GENERAL
+====================== */
+/*Para pantallas medianas*/
+@media (max-width: 1024px) {
+  nav, .nav-superior {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .hero-image img {
+    height: 300px;
+  }
+
+  .cuadroDeImagenes {
+    margin: 20px;
+  }
+
+  .division1, .division2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .peliculas {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
+  .pelicula {
+    min-width: 200px;
+  }
+
+  .combos img {
+    width: 80%;
+  }
+
+  .footer-contenedor {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/*Para pantallas pequeñas*/
+@media (max-width: 600px) {
+  nav, .nav-superior {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .menu a {
+    display: block;
+    margin: 5px 0;
+    padding: 10px 0;
+  }
+
+  .hero-image img {
+    height: 200px;
+  }
+
+  .experiencias-cine {
+    padding: 15px 10px;
+  }
+
+  .tipo-experiencia img {
+    max-width: 100%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .cuadroDeImagenes {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 10px;
+  }
+
+  .division1, .division2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .peliculas {
+    gap: 10px;
+  }
+
+  .pelicula {
+    min-width: 180px;
+  }
+
+  .combos img {
+    width: 100%;
+  }
+
+  .list a {
+    font-size: 18px;
+  }
+
+  .footer-redes img {
+    width: 30px;
+    height: auto;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+/* Botón hamburguesa oculto por defecto */
+.bars {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bars .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Solo en móviles (menor a 768px) */
+@media (max-width: 768px) {
+  .bars {
+    display: flex;
+  }
+
+  .nav-superior .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #014034;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .nav-superior .menu.show {
+    display: flex;
+  }
+
+  .nav-superior .menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .nav-superior .submenu {
+    display: none;
+    flex-direction: column;
+    background-color: #035b49;
+  }
+
+  .nav-superior .submenu-hover:hover .submenu {
+    display: flex;
+  }
+}
+
+/* ================================
+BOTONES FLOTANTES (Subir / Bajar)
+================================ */
+.botones-scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.botones-scroll button {
+  background-color: #014034;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.botones-scroll button:hover {
+  background-color: #016b50;
+}
+
+.botones-scroll button:active {
+  background-color: #F0D98C; 
+  color: #014034; 
+  transform: scale(0.95);
+}

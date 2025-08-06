@@ -1,0 +1,636 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: normal 1.2rem 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    background-size: cover;
+    animation: fadeIn 1s ease-in;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex; /* Para el footer fijo */
+    flex-direction: column; /* Para el footer fijo */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* NAV */
+nav {
+    background-color: #014034; /* Verde esmeralda oscuro */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo img {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.menu {
+    margin-left: auto;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 15px;
+    transition: color 0.3s ease;
+}
+
+nav .menu a:hover {
+    color: #f4c95d; /* dorado vivo */
+    text-shadow: 0 0 6px rgba(244, 201, 93, 0.8);
+}
+.menu a.active {
+    border-bottom: 2px solid #ffffff;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: black;
+}
+
+header p {
+    font-size: 1.2em;
+    color: black;
+    margin-top: 10px;
+}
+.registro {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1rem;
+    color: #014034;
+}
+
+.registro a {
+    color: #f4c95d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.registro a:hover {
+    color: #d4a939;
+}
+
+/* Contenedor principal de las membresías */
+.membresias {
+    display: flex;
+    flex-wrap: wrap; /* CAMBIA ESTO: de 'wrap' a 'nowrap' para forzar una sola fila */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px; /* Espacio entre las tarjetas */
+    padding: 20px;
+    /* Un max-width adecuado para que quepan tus 3 tarjetas + gaps */
+    max-width: 1200px; /* Por ejemplo, 3*380px (ancho tarjeta) + 2*30px (gaps) = 1140px + 60px = 1200px */
+    margin: 20px auto; /* Centra el contenedor de tarjetas */
+}
+
+/* Tarjeta de Membresía (se mantiene .login-container como pediste) */
+.login-container { /* Mantenido como .login-container */
+    background: rgba(1, 64, 52, 0.9); /* verde esmeralda oscuro translúcido */
+    color: #ffffff;
+    flex: 1 1 300px;
+    max-width: 380px; /* Ajustado el ancho para que quepan 3 en un contenedor de 1200px con gap */
+    width: 100%; /* Permite que ocupe todo el ancho disponible en pantallas pequeñas */
+    padding: 30px 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(14px);
+    border: 1px solid #f4c95d;
+    box-shadow: 0 0 20px rgba(244, 201, 93, 0.3);
+    transition: all 0.4s ease;
+    flex-direction: column;
+    text-align: center; /* Centra el contenido de la tarjeta */
+    display: flex; /* Para organizar el contenido internamente */
+    justify-content: space-between; /* Distribuye el espacio verticalmente */
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+}
+
+.login-container h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #f4c95d; /* título dorado para destacar */
+    text-shadow: 0 0 8px rgba(244, 201, 93, 0.8);
+}
+
+.login-container h3 { /* Estilo para el subtitulo "Beneficios" */
+    color: #ffffff; /* Dorado para el subtítulo */
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.login-container img {
+    max-width: 150px; /* Ajustado el tamaño de la imagen */
+    height: auto;
+    margin: 0 auto 20px; /* Centra la imagen y añade margen inferior */
+    display: block; /* Asegura que la imagen se centre correctamente */
+}
+
+.login-container ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.login-container ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    color: #ffffff;
+    border: 1px solid rgba(244, 201, 93, 0.3);
+}
+
+.login-container .precio {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(244, 201, 93, 0.5);
+}
+
+/* BOTÓN (Aplicado al botón de cada membresía) */
+.btn-membresia {
+    margin-top: 25px;
+    width: 100%;
+    padding: 13px;
+    background-color: #f4c95d;
+    color: #014034;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-membresia:hover {
+    color: #ffffff;
+    background-color: #d4a939; /* dorado oscuro */
+    transform: scale(1.03);
+    box-shadow: 0 0 14px rgba(212, 169, 57, 0.9);
+}
+/* ======================
+    PIE DE PAGINA
+====================== */
+footer {
+    background-color: #014034; /* Verde esmeralda oscuro */
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+    transition: background-color 0.4s ease;
+}
+
+.footer-contenedor {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-redes {
+    margin-top: 1rem;
+}
+
+.footer-redes a {
+    margin: 0 0.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.footer-redes img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.footer-redes a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s, text-decoration 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Ventana flotante (Modal de pago, politica, terminos) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilitar scroll si el contenido es demasiado grande */
+    background-color: rgba(0,0,0,0.6); /* Fondo semi-transparente oscuro */
+    backdrop-filter: blur(3px); /* Efecto de desenfoque */
+    display: flex; /* Para centrar el contenido */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    padding: 20px; /* Espaciado alrededor del modal en pantallas pequeñas */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* Centra el modal */
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 90%; /* Ancho responsivo */
+    max-width: 550px; /* Ancho máximo para el modal */
+    position: relative;
+    animation: fadeIn 0.4s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #333;
+}
+.modal-content h2 {
+    margin-top: 0;
+    color: #014034;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.modal-content p,
+.modal-content ul {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.modal-content ul {
+    padding-left: 1.2rem;
+}
+
+.modal-content li {
+    margin-bottom: 8px;
+}
+
+/* Estilos específicos del modal de pago de membresías */
+.membership-details {
+    background-color: #e6f7ff;
+    border: 1px solid #99d6ff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #014034;
+}
+
+.membership-details p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #014034;
+}
+
+.membership-details strong {
+    color: #f4c95d;
+}
+
+.payment-methods {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.payment-methods h3 {
+    margin-top: 0;
+    color: #014034;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.payment-methods label {
+    display: inline-block;
+    margin: 0 15px 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #333;
+}
+
+.payment-methods input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+.payment-methods label img { /* Estilo para las imágenes dentro de los labels de método de pago */
+    height: 25px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+
+.payment-section {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.payment-section img {
+    max-width: 180px;
+    height: auto;
+    margin: 15px auto;
+    display: block;
+    border: 2px solid #014034;
+    border-radius: 10px;
+}
+
+#cardPaymentForm label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#cardPaymentForm input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+#cardPaymentForm input[type="text"]:focus {
+    outline: none;
+    border-color: #f4c95d;
+    box-shadow: 0 0 8px rgba(244, 201, 93, 0.5);
+}
+
+.btn-procesar-pago {
+    margin-top: 25px;
+    width: 100%;
+    padding: 15px;
+    background-color: #f4c95d;
+    color: #014034;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-procesar-pago:hover {
+    color: #ffffff;
+    background-color: #d4a939;
+    transform: scale(1.02);
+    box-shadow: 0 0 14px rgba(212, 169, 57, 0.9);
+}
+
+.voucher {
+    background-color: #e9f7ef;
+    color: #014034;
+    border-color: #c3e6cb;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #014034;
+    margin-top: 20px;
+}
+
+.voucher h3 {
+    color: #014034;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.voucher p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.voucher button {
+    background-color: #014034;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    font-weight: normal;
+    box-shadow: none;
+    margin-top: 10px;
+}
+
+.voucher button:hover {
+    background-color: #016b50;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* Botones dentro del modal para política y términos (si se reusan) */
+.modal-buttons {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.9em;
+    box-shadow: none;
+    transform: none;
+}
+
+.modal-buttons button:first-child {
+    background-color: #014034;
+    color: #fff;
+}
+
+.modal-buttons button:last-child {
+    background-color: #ccc;
+    color: #333;
+}
+
+.modal-buttons button:hover:first-child {
+    background-color: #016b50;
+}
+
+.modal-buttons button:hover:last-child {
+    background-color: #bbb;
+}
+
+/* Botón cerrar */
+.close {
+    color: #888;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* ======================
+    ANIMACIONES footer
+====================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*RESPONSIVO GENERAL*/
+/* Dispositivos de 1024*/
+@media (max-width: 1024px) {
+    nav {
+        padding: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu a {
+        margin: 5px 8px;
+        padding: 6px 12px;
+        font-size: 0.95rem;
+    }
+     header h1 {
+        font-size: 2.2em;
+    }
+    header p {
+        font-size: 1.1em;
+    }
+    .login-container {
+        max-width: 90%; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+        padding: 20px;
+        gap: 5px;
+    }
+    .login-container h2 {
+        font-size: 1.6em;
+    }
+     button {
+        font-size: 16px;
+        padding: 12px;
+    }
+    .registro p {
+        font-size: 12px;
+    }
+}
+
+/* Dispositivos pequeños */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+    }
+    .logo {
+        margin-bottom: 15px;
+    }
+    .menu {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .menu a {
+        margin: 10px 0;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .login-container {
+        padding: 15px;
+    }
+    .login-container h2 {
+        font-size: 1.4em;
+    }
+    button {
+        font-size: 15px;
+        padding: 10px;
+    }
+    .registro p {
+        font-size: 12px;
+    }
+    .footer-contenedor {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .footer-links a {
+        font-size: 0.8rem;
+        display: block;
+        margin: 8px auto;
+    }
+}

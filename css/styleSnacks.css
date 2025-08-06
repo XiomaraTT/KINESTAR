@@ -1,0 +1,583 @@
+/* ======================
+    ESTILOS GENERALES 
+   ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 1rem 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  transition: background-color 0.4s ease-in-out;
+}
+
+/* ======================
+BARRA DE NAVEGACIÓN
+====================== */
+nav {
+  background-color: #014034;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.logo img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  position: relative;
+  margin: 0 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+  display: block;
+}
+
+.menu a:hover {
+  color: #F0D98C;
+  text-shadow: 0 0 6px rgba(240, 217, 140, 0.5);
+}
+
+.menu a.active {
+  border-bottom: 2px solid #efefef;
+}
+
+/* ======================
+SUBMENÚ DESPLEGABLE
+====================== */
+.submenu-hover {
+  position: relative;
+}
+
+.submenu-hover > a {
+  display: inline-block;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #014034;
+  padding: 10px 0;
+  min-width: 180px;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.submenu li a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu-hover:hover .submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ======================
+ICONO DE USUARIO
+====================== */
+.icono-usuario {
+  height: 30px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+/* ======================
+   SECCIÓN DE SNACKS
+====================== */
+.snacks-section {
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
+  transition: background-color 0.4s ease;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #0b1d1f;
+  animation: fadeIn 0.8s ease;
+}
+
+.category-title {
+  font-size: 1.6rem;
+  margin: 40px 0 20px;
+  color: #0b1d1f;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Contenedor de tarjetas */
+.snack-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Tarjetas individuales */
+.snack-card {
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 260px;
+  text-align: center;
+  opacity: 1;
+  animation: fadeInUp 1s ease forwards;
+  transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.snack-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.snack-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.snack-card img:hover {
+  transform: scale(1.03);
+}
+
+.snack-card h3 {
+  margin: 10px 0 5px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.snack-card p {
+  font-size: 0.95rem;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.snack-card .price {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #c02737;
+  transition: color 0.3s ease;
+}
+
+/* Botón */
+.snack-card button {
+  background-color:  #014034; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.snack-card button:hover {
+  background-color: #5c2e00; /* Marrón oscuro intenso */
+  transform: scale(1.03);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
+}
+
+/* ======================
+   FOOTER
+====================== */
+footer {
+  background-color: #014034; /* Verde esmeralda oscuro */
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  transition: background-color 0.4s ease;
+}
+
+.footer-contenedor {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-redes {
+  margin-top: 1rem;
+}
+
+.footer-redes a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-redes img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.footer-redes a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s, text-decoration 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Ventana flotante*/
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: fadeIn 0.4s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+.modal-content h2 {
+  margin-top: 0;
+  color: #014034;
+}
+
+.modal-content p,
+.modal-content ul {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.modal-content ul {
+  padding-left: 1.2rem;
+}
+
+.modal-content li {
+  margin-bottom: 8px;
+}
+
+/* Botones dentro del modal */
+
+.modal-buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-buttons button:first-child {
+  background-color: #014034;
+  color: #fff;
+}
+
+.modal-buttons button:last-child {
+  background-color: #ccc;
+  color: #333;
+}
+
+.modal-buttons button:hover:first-child {
+  background-color: #016b50;
+}
+
+.modal-buttons button:hover:last-child {
+  background-color: #bbb;
+}
+/* Botón cerrar */
+.close {
+  color: #888;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* ======================
+   ANIMACIONES
+====================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO PARA EL FOOTER */
+@media (max-width: 600px) {
+  .footer-redes a img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 8px auto;
+  }
+}
+/* ======================
+   RESPONSIVE GENERAL
+====================== */
+
+/* pantallas medianas */
+@media (max-width: 1024px) {
+   nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .menu a {
+    margin: 10px 0;
+  }
+  .snack-card {
+    width: 45%;
+    margin: 10px;
+    background-color: #fff8e7; /* color crema claro */
+  }
+
+  .menu a {
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 0.9rem;
+  }
+}
+
+/* pantallas pequeñas */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .menu a {
+    margin: 10px 0;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  .snack-card {
+    width: 90%;
+    margin: 10px auto;
+    background-color: #e7f7ff; /* azul claro */
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  .section-title,
+  .category-title {
+    font-size: 2rem;
+  }
+
+  .snack-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .snack-card p,
+  .snack-card .price {
+    font-size: 1rem;
+  }
+
+  .snack-card button {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  .footer-links,
+  .footer-redes {
+    margin-top: 10px;
+  }
+}
+
+.bars {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  z-index: 1002;
+}
+
+.bars .line {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Solo se muestra en pantallas pequeñas */
+@media (max-width: 768px) {
+  .bars {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: #014034;
+    top: 70px;
+    left: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  .menu.show-menu {
+    transform: translateY(0);
+  }
+
+  .menu a {
+    display: block;
+    padding: 15px 0;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu a:hover {
+    background-color: #035b49;
+    color: #F0D98C;
+  }
+}
+
+
+
+/* ================================
+BOTONES FLOTANTES (Subir / Bajar)
+================================ */
+.botones-scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.botones-scroll button {
+  background-color: #014034;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.botones-scroll button:hover {
+  background-color: #016b50;
+}
+
+.botones-scroll button:active {
+  background-color: #F0D98C; 
+  color: #014034; 
+  transform: scale(0.95);
+}

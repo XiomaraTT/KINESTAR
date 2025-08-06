@@ -1,0 +1,582 @@
+/* ======================
+    ESTILOS GENERALES 
+   ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 1rem 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  transition: background-color 0.4s ease-in-out;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ======================
+BARRA DE NAVEGACIÓN
+====================== */
+nav {
+  background-color: #014034;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.logo img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  position: relative;
+  margin: 0 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+  display: block;
+}
+
+.menu a:hover {
+  color: #F0D98C;
+  text-shadow: 0 0 6px rgba(240, 217, 140, 0.5);
+}
+
+.menu a.active {
+  border-bottom: 2px solid #efefef;
+}
+
+/* ======================
+SUBMENÚ DESPLEGABLE
+====================== */
+.submenu-hover {
+  position: relative;
+}
+
+.submenu-hover > a {
+  display: inline-block;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #014034;
+  padding: 10px 0;
+  min-width: 180px;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.submenu li a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu-hover:hover .submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ======================
+ICONO DE USUARIO
+====================== */
+.icono-usuario {
+  height: 30px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* ======================
+    Seccion Proximos Extrenos
+   ====================== */
+  .estrenos {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  /*Titulo de la seccion*/
+  .estrenos h1 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #013220;
+    text-shadow: 2px 2px #fff6f5;
+  }
+  /* ======================
+   TARJETAS DE PELÍCULAS 
+   ====================== */
+    /* Estilo individual por película */
+  .pelicula {
+    display: flex;
+    background-color: #ffffff;
+    color: #000000;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+   /*Efecto para las tarjetas*/
+  .pelicula:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+    /* Ajuste para imágenes */
+  .pelicula img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px 0 0 16px;
+  }
+    /* Contenedor de (titulo+fecha+sipnosis) */
+  .info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* titulo de la peli */
+  .info h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #013220;
+  }
+   /* fecha de la peli */
+  .fecha {
+    font-style: italic;
+    color: #555;
+    margin: 0.5rem ;
+  }
+   /* sipnosis de la peli */
+  .sinopsis {
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+/* ======================
+   PIE DE PAGINA
+====================== */
+footer {
+  background-color: #014034; /* Verde esmeralda oscuro */
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  transition: background-color 0.4s ease;
+}
+
+.footer-contenedor {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-redes {
+  margin-top: 1rem;
+}
+
+.footer-redes a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-redes img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.footer-redes a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s, text-decoration 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Ventana flotante*/
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: fadeIn 0.4s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+.modal-content h2 {
+  margin-top: 0;
+  color: #014034;
+}
+
+.modal-content p,
+.modal-content ul {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.modal-content ul {
+  padding-left: 1.2rem;
+}
+
+.modal-content li {
+  margin-bottom: 8px;
+}
+
+/* Botones dentro del modal */
+
+.modal-buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-buttons button:first-child {
+  background-color: #014034;
+  color: #fff;
+}
+
+.modal-buttons button:last-child {
+  background-color: #ccc;
+  color: #333;
+}
+
+.modal-buttons button:hover:first-child {
+  background-color: #016b50;
+}
+
+.modal-buttons button:hover:last-child {
+  background-color: #bbb;
+}
+/* Botón cerrar */
+.close {
+  color: #888;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* ======================
+   ANIMACIONES footer
+====================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO GENERAL */
+  /* Para pantallas de hasta 1024px */
+@media (max-width: 1024px) {
+  nav {
+    padding: 15px; /* Reduce el padding de la barra de navegación */
+  }
+  .menu a {
+    margin: 0 8px; /* Ajusta los márgenes entre los enlaces del menú */
+    padding: 4px 12px; /* Reduce el padding de los enlaces */
+    font-size: 0.95rem; /* Ajusta ligeramente el tamaño de fuente */
+  }
+  .estrenos {
+    padding: 1.5rem; /* Reduce el padding general de la sección */
+  }
+  .estrenos h1 {
+    font-size: 2.5rem; /* Reduce el tamaño del título principal */
+    margin-bottom: 2rem;
+  }
+  .pelicula {
+    flex-direction: column; /* Apila la imagen y la información en vertical */
+    align-items: center; /* Centra los elementos apilados */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+  }
+  .pelicula img {
+    height: 300px;
+    width: 100%; /* La imagen ocupa todo el ancho */
+    border-radius: 16px 16px 0 0; /* Ajusta los bordes de la imagen */
+    object-fit: contain; /* Asegura que la imagen completa se vea sin recortar */
+  }
+  .info {
+    padding: 1.5rem; /* Ajusta el padding de la información */
+    align-items: center; /* Centra los elementos internos del info */
+  }
+  .info h2 {
+    font-size: 1.6rem; /* Reduce el tamaño del título de la película */
+    margin-bottom: 0.3rem; /* Ajusta el margen inferior */
+  }
+  .fecha {
+    font-size: 0.9rem; /* Reduce el tamaño de la fecha */
+    margin-bottom: 0.8rem;
+  }
+  .sinopsis {
+    font-size: 0.95rem; /* Ajusta el tamaño de la sinopsis */
+    text-align: center; /* Centra el texto de la sinopsis */
+  }
+}
+
+/* Para pantallas de hasta 600px (Smartphones) */
+@media (max-width: 600px) {
+
+  /* Navegación */
+  nav {
+    flex-direction: column; /* Apila el logo y el menú */
+    align-items: center; /* Centra los elementos apilados */
+    padding: 15px 10px; /* Ajusta el padding para móviles */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Espacio entre el logo y el menú */
+  }
+
+  .menu {
+    margin-left: 0; /* Quita el margen que empuja a la derecha */
+    width: 100%; /* El menú ocupa todo el ancho disponible */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribuye los enlaces uniformemente */
+    gap: 5px; /* Espacio entre enlaces en el menú */
+  }
+
+  .menu a {
+    margin: 5px; /* Margen para los enlaces */
+    padding: 6px 10px; /* Ajusta el padding de los enlaces */
+    font-size: 0.85rem; /* Tamaño de fuente más pequeño para enlaces */
+  }
+
+  /* Sección Estrenos */
+  .estrenos {
+    padding: 1rem; /* Más padding para los costados */
+  }
+
+  .estrenos h1 {
+    font-size: 2rem; /* Reduce aún más el tamaño del título principal */
+    margin-bottom: 1.5rem;
+  }
+
+  /* Tarjetas de Películas */
+  .pelicula {
+    margin-bottom: 1.5rem; /* Reduce el margen inferior entre películas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+  }
+
+  .pelicula img {
+    max-height: 500em; /* Limita la altura de la imagen en móviles */
+    object-fit: contain; /* Asegura que la imagen completa se vea sin recortar */
+    object-fit: cover;
+  }
+
+  .info {
+    padding: 1rem; /* Reduce el padding de la información */
+  }
+
+  .info h2 {
+    font-size: 1.5rem; /* Tamaño de título más pequeño para películas */
+  }
+
+  .fecha {
+    font-size: 0.85rem; /* Tamaño de fecha más pequeño */
+  }
+
+  .sinopsis {
+    font-size: 0.9rem; /* Tamaño de sinopsis más pequeño */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+  }
+
+  /* Footer */
+  .footer-redes a img {
+    width: 25px; /* Ajusta el tamaño de los iconos de redes */
+    height: 25px;
+  }
+
+  .footer-links a {
+    display: block; /* Cada enlace del footer en su propia línea */
+    margin: 8px auto; /* Centra los enlaces con margen automático */
+    font-size: 0.8rem; /* Reduce el tamaño de fuente de los enlaces del footer */
+  }
+}
+
+
+/* Botón hamburguesa */
+.bars {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  z-index: 1002;
+}
+
+.bars .line {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Mostrar hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+  .bars {
+    display: flex;
+  }
+
+  .nav-superior .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #014034;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .nav-superior .menu.show-menu {
+    transform: translateY(0);
+  }
+
+  .nav-superior .menu a {
+    display: block;
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* ================================
+BOTONES FLOTANTES (Subir / Bajar)
+================================ */
+.botones-scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.botones-scroll button {
+  background-color: #014034;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.botones-scroll button:hover {
+  background-color: #016b50;
+}
+
+.botones-scroll button:active {
+  background-color: #F0D98C; 
+  color: #014034; 
+  transform: scale(0.95);
+}
+  

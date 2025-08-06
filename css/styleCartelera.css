@@ -1,0 +1,890 @@
+/* ======================
+    ESTILOS GENERALES 
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 1rem 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  transition: background-color 0.4s ease-in-out;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+/* ======================
+    BARRA DE NAVEGACIÓN
+====================== */
+nav {
+  background-color: #014034;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.logo img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  position: relative;
+  margin: 0 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+  display: block;
+}
+
+.menu a:hover {
+  color: #F0D98C;
+  text-shadow: 0 0 6px rgba(240, 217, 140, 0.5);
+}
+
+.menu a.active {
+  border-bottom: 2px solid #efefef;
+}
+
+
+/* ======================
+    SUBMENÚ DESPLEGABLE
+====================== */
+.submenu-hover {
+  position: relative;
+}
+
+.submenu-hover > a {
+  display: inline-block;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #014034;
+  padding: 10px 0;
+  min-width: 180px;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.submenu li a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu-hover:hover .submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ======================
+    ICONO DE USUARIO
+====================== */
+.icono-usuario {
+  height: 30px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icono-usuario:hover {
+  transform: scale(1.1);
+}
+
+
+/* ======================
+    SECCIÓN CARTELERA 
+====================== */
+.titulo-cartelera {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #013220;
+  text-shadow: 1px 1px #F0D98C;
+}
+
+.estrenos {
+  padding: 2rem;
+  background-color: #F0D98C;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+/* ======================
+    TARJETAS DE PELÍCULAS 
+====================== */
+.pelicula {
+  position: relative;
+  width: 22%;
+  margin: 1.5%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pelicula:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pelicula img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 50, 32, 0.95);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  border-left: 5px solid #013220;
+  display: flex;
+  align-items: center;
+}
+
+.pelicula:hover .overlay {
+  opacity: 1;
+}
+
+.sinopsis-container {
+  overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sinopsis-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.overlay .sinopsis {
+  font-family: 'Georgia', serif;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  overflow: hidden;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transform: translateX(-10px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.pelicula:hover .overlay .sinopsis {
+  transform: translateX(0);
+}
+
+.overlay .sinopsis:empty {
+  display: none;
+}
+
+
+/* ======================
+    TABLA DE PELÍCULAS 
+====================== */
+.horarios-container {
+  width: 100%;
+  overflow-x: auto;
+  flex: 1;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 50px auto;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  background-color: #fff8f8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+caption {
+  margin: 30px auto;
+  font-size: 2.5em;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #013220;
+  letter-spacing: 2px;
+}
+
+th, td {
+  border: 1px solid #990000;
+  padding: 12px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.vacio {
+  background-color: #f3f3f3;
+  color: #999;
+}
+
+
+/* ======================
+    COLORES POR PELÍCULA 
+====================== */
+.Annabelle5 { background-color: #e0f5f2; }
+.Sonic3     { background-color: #c1ece7; }
+.Flow       { background-color: #a3e3db; }
+.Okja       { background-color: #85dbcf; }
+.TheChosen  { background-color: #67d2c3; }
+.Minecraft  { background-color: #49c9b7; }
+.TheMonkey  { background-color: #2bc0aa; }
+.Slenderman { background-color: #0fa292; color: white; }
+.TM9        { background-color: #0a7c6f; color: white; }
+.Escape     { background-color: #066055; color: white; }
+.EMVA       { background-color: #044d45; color: white; }
+.LNDMO      { background-color: #033f39; color: white; }
+.Yomeddine  { background-color: #02312d; color: white; }
+.ND         { background-color: #012721; color: white; }
+
+.Annabelle5, .Sonic3, .Flow, .Okja, .TheChosen {
+  color: #000 !important;
+  font-weight: bold;
+}
+
+/* ======================
+   Pie de Pagina
+====================== */
+footer {
+  background-color: #014034; /* Verde esmeralda oscuro */
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  transition: background-color 0.4s ease;
+}
+
+.footer-contenedor {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-redes {
+  margin-top: 1rem;
+}
+
+.footer-redes a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-redes img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.footer-redes a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s, text-decoration 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Ventana flotante*/
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: fadeIn 0.4s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+.modal-content h2 {
+  margin-top: 0;
+  color: #014034;
+}
+
+.modal-content p,
+.modal-content ul {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.modal-content ul {
+  padding-left: 1.2rem;
+}
+
+.modal-content li {
+  margin-bottom: 8px;
+}
+
+/* Botones dentro del modal */
+
+.modal-buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-buttons button:first-child {
+  background-color: #014034;
+  color: #fff;
+}
+
+.modal-buttons button:last-child {
+  background-color: #ccc;
+  color: #333;
+}
+
+.modal-buttons button:hover:first-child {
+  background-color: #016b50;
+}
+
+.modal-buttons button:hover:last-child {
+  background-color: #bbb;
+}
+/* Botón cerrar */
+.close {
+  color: #888;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* ===========================
+   ANIMACIONES PARA EL FOOTER
+========================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================
+    MODAL DE ASIENTOS
+====================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+#seatingArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.row {
+  display: flex;
+  margin: 5px 0;
+  align-items: center;
+}
+
+.row-label {
+  width: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #013220;
+}
+
+.seat {
+  width: 25px;
+  height: 25px;
+  margin: 2px;
+  background-color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.seat.selected {
+  background-color: #147966;
+}
+
+.seat.occupied {
+  background-color: #ff4d4d;
+  cursor: not-allowed;
+}
+
+.aisle {
+  width: 20px;
+}
+
+
+/* ======================
+    BOTONES GENERALES
+====================== */
+.btn-principal {
+  padding: 12px 30px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-principal:hover {
+  background-color: #999;
+  transform: translateY(-2px);
+}
+
+.btn-principal:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.btn-principal:focus {
+  outline: 2px solid #F0D98C;
+}
+
+.modal-btn {
+  background-color: #999;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-btn:hover {
+  background-color: #000000;
+}
+
+
+/* ======================
+    RESPONSIVO
+====================== */
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .menu a {
+    margin: 10px 0;
+  }
+
+  .estrenos {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .pelicula {
+    width: 45%;
+    margin: 2.5%;
+  }
+
+  .pelicula img {
+    height: 400px;
+  }
+
+  table {
+    font-size: 0.95rem;
+  }
+
+  caption {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .menu a {
+    margin: 10px 0;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  .titulo-cartelera {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  .estrenos {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .pelicula {
+    width: 90%;
+    margin: 1rem auto 2rem;
+  }
+
+  .pelicula img {
+    height: 300px;
+  }
+
+  .overlay {
+    font-size: 0.85rem;
+    padding: 15px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.85rem;
+    margin: 30px auto;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  caption {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  .footer-contenedor {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .footer-redes a img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-links a {
+    margin: 0;
+  }
+}
+
+
+.boton-comprar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  padding: 10px 0;
+}
+
+.buy-btn {
+  padding: 10px 24px;
+  background-color: #000000; 
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.buy-btn:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.buy-btn:focus {
+  outline: 2px solid #F0D98C;
+}
+
+.buy-btn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+
+
+
+
+.pago-qr {
+    display: none;
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    margin: 40px auto;
+    border: 2px solid #ccc;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.pago-qr img.qr-img {
+    max-width: 250px;
+    margin: 20px auto;
+}
+
+#pagoQR {
+  display: none;
+}
+
+
+
+
+
+
+#btnHorario {
+  background-color: #014034;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  /* NUEVO: espaciado y centrado */
+  margin: 40px auto;
+  display: block;
+}
+
+/* Botón hamburguesa */
+.bars {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  z-index: 1002;
+}
+
+.bars .line {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Mostrar hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+  .bars {
+    display: flex;
+  }
+
+  .nav-superior .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #014034;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .nav-superior .menu.show-menu {
+    transform: translateY(0);
+  }
+
+  .nav-superior .menu a {
+    display: block;
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* ================================
+BOTONES FLOTANTES (Subir / Bajar)
+================================ */
+.botones-scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.botones-scroll button {
+  background-color: #014034;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.botones-scroll button:hover {
+  background-color: #016b50;
+}
+
+.botones-scroll button:active {
+  background-color: #F0D98C; 
+  color: #014034; 
+  transform: scale(0.95);
+}

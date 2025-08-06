@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - KINESTAR</title>
+    <link rel="stylesheet" href="css/styleUnete.css"> 
+     <link rel="stylesheet" href="css/styleContactanos.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Logo KINESTAR" width="120">
+        </div>
+        <div class="menu">
+            <a href="Inicio.html">Inicio</a>
+            <a href="Registrate.html">Regístrate</a>
+            <a href="Unete.html" class="active">Únete</a>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Únete</h1>
+        <p>Hazte miembro exclusivo de KINESTAR</p>
+    </header>
+
+    <!-- Formulario de login -->
+    <section class="membresias">
+        <section class="login-container">
+            <h2>Socio Plata</h2>
+            <h3>Beneficios</h3>
+            <img src="img/plata.png" alt="plata">
+            <ul>
+                <li>
+                    <p>Cancha pequeña gratis una vez al mes</p>
+                </li>
+                <li>
+                    <p>10% de descuento en entradas</p>
+                </li>
+                <li>
+                    <p>Cartelera al correo electrónico</p>
+                </li>
+                <li>
+                    <p>Regalo de cumpleaños (entrada 2D)</p>
+                </li>
+            </ul>
+            <p class="precio">S/.10 al mes</p>
+            <button class="btn-membresia" onclick="abrirModalPagoMembresia('Socio Plata', 10.00)">Comprar Membresía</button>
+        </section>
+
+        
+        <section class="login-container">
+            <h2>Socio Oro</h2>
+            <h3>Beneficios</h3>
+            <img src="img/oro.png" alt="oro">
+            <ul>
+                <li>
+                    <p>Cancha mediana gratis una vez al mes</p>
+                </li>
+                <li>
+                    <p>15% de descuento en entradas</p>
+                </li>
+                <li>
+                    <p>Cartelera al correo electrónico</p>
+                </li>
+                <li>
+                    <p>Regalo de cumpleaños (2 entradas 2D)</p>
+                </li>
+            </ul>
+            <p class="precio">S/.20 al mes</p>
+            <button class="btn-membresia" onclick="abrirModalPagoMembresia('Socio Oro', 20.00)">Comprar Membresía</button>
+
+        </section>
+        <section class="login-container">
+            <h2>Socio Black</h2>
+            <h3>Beneficios</h3>
+            <img src="img/black.png" alt="black">
+            <ul>
+                <li>
+                    <p>Cancha grande gratis una vez al mes</p>
+                </li>
+                <li>
+                    <p>25% de descuento en entradas</p>
+                </li>
+                <li>
+                    <p>Cartelera al correo electrónico</p>
+                </li>
+                <li>
+                    <p>Regalo de cumpleaños (2 entradas 3D)</p>
+                </li>
+            </ul>
+            <p class="precio">S/.30 al mes</p>
+            <button class="btn-membresia" onclick="abrirModalPagoMembresia('Socio Diamante', 30.00)">Comprar Membresía</button>
+
+        </section>
+    </section>
+    <div class="registro">
+        <p>¿No tienes una cuenta? <a href="Registrate.html">Regístrate aquí</a></p>
+    </div>
+
+<div id="membershipPaymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalPagoMembresia()">&times;</span>
+            <h2>Pago de Membresía: <span id="selectedMembershipTitle"></span></h2>
+
+            <div class="membership-details">
+                <p>Membresía seleccionada: <strong id="membershipTypeDisplay"></strong></p>
+                <p>Precio: <strong id="membershipPriceDisplay"></strong></p>
+            </div>
+
+            <div class="payment-methods">
+                <h3>Selecciona un método de pago:</h3>
+                <label>
+                    <input type="radio" name="membershipPaymentMethod" value="yape" checked> Yape
+                </label>
+                <label>
+                    <input type="radio" name="membershipPaymentMethod" value="plin"> Plin
+                </label>
+                <label>
+                    <input type="radio" name="membershipPaymentMethod" value="tarjeta"> Tarjeta de Crédito/Débito
+                </label>
+            </div>
+
+            <div id="qrMembershipPayment" class="payment-section">
+                </div>
+
+            <form id="cardPaymentForm" class="payment-section" style="display: none;">
+                <h3>Datos de la Tarjeta</h3>
+                <label for="cardNumber">Número de Tarjeta:</label>
+                <input type="text" id="cardNumber" placeholder="**** **** **** ****" required>
+
+                <label for="cardName">Nombre en la Tarjeta:</label>
+                <input type="text" id="cardName" placeholder="Como aparece en la tarjeta" required>
+
+                <label for="expiryDate">Fecha de Vencimiento (MM/AA):</label>
+                <input type="text" id="expiryDate" placeholder="MM/AA" pattern="(0[1-9]|1[0-2])\/\d{2}" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="***" pattern="\d{3,4}" required>
+            </form>
+
+            <div id="membershipVoucher" class="payment-section voucher" style="display: none;">
+                <h3>¡Pago Completado!</h3>
+                <p id="membershipVoucherDetails"></p>
+                <button onclick="cerrarModalPagoMembresia()">Cerrar</button>
+            </div>
+
+            <button class="btn-procesar-pago" onclick="procesarPagoMembresia()">Proceder al Pago</button>
+        </div>
+    </div>
+    <!-- Footer -->
+  <footer>
+  <div class="footer-contenedor">
+    <p>&copy; 2025 El equipo de KINESTAR.</p>
+
+    <div class="footer-redes">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="img/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="img/ig.svg" alt="Instagram">
+      </a>
+      <a href="https://wa.me/51112345678" target="_blank">
+        <img src="img/whatsapp.svg" alt="Whatsapp">
+      </a>
+    </div>
+
+    <!--  Footer Links de Politicas y Termninos--->
+    <div class="footer-links">
+      <a href="#" onclick="abrirModal('modal-politica')">Política de Privacidad</a>
+      <a href="#" onclick="abrirModal('modal-terminos')">Términos y Condiciones</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal: Política de Privacidad -->
+<div id="modal-politica" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal-politica')">&times;</span>
+    <h2>Política de Privacidad</h2>
+    <p>En KINESTAR, respetamos y protegemos la privacidad de nuestros usuarios. 
+      Esta política describe cómo recopilamos, usamos y protegemos la información personal 
+      que usted nos proporciona a través de nuestro sitio web.</p>
+    <ul>
+      <li><strong>Recopilación de Datos:</strong> Podemos recopilar información como nombre, 
+        correo electrónico, número de teléfono y otros datos cuando usted los proporciona voluntariamente.</li>
+      <li><strong>Uso de Información:</strong> Utilizamos sus datos para responder a sus consultas,
+         brindarle nuestros servicios y enviarle comunicaciones importantes relacionadas con su interacción
+          con nosotros.</li>
+      <li><strong>Protección:</strong> Tomamos medidas razonables para proteger su información contra 
+        accesos no autorizados o divulgación.</li>
+      <li><strong>Cookies:</strong> Nuestro sitio puede utilizar cookies para mejorar la experiencia
+         del usuario.</li>
+    </ul>
+    <p>Al usar este sitio, usted acepta nuestra política de privacidad. Si tiene preguntas, puede contactarnos
+      en nuestro formulario de contacto.</p>
+    <div class="modal-buttons">
+      <button onclick="aceptarModal('modal-politica')">Aceptar</button>
+      <button onclick="rechazarModal('modal-politica')">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Términos y Condiciones -->
+<div id="modal-terminos" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal-terminos')">&times;</span>
+    <h2>Términos y Condiciones</h2>
+    <p>El acceso y uso del sitio web de KINESTAR están sujetos a los siguientes términos y condiciones:</p>
+    <ul>
+      <li><strong>Uso del Sitio:</strong> Usted se compromete a utilizar el sitio de manera legal y respetuosa.</li>
+      <li><strong>Propiedad Intelectual:</strong> Todo el contenido del sitio (textos, imágenes, logotipos) está protegido por derechos de autor y no puede ser utilizado sin permiso previo.</li>
+      <li><strong>Responsabilidad:</strong> KINESTAR no se hace responsable por daños derivados del uso o mal uso del sitio web.</li>
+      <li><strong>Modificaciones:</strong> Nos reservamos el derecho de actualizar estos términos en cualquier momento.</li>
+    </ul>
+    <p>Al continuar utilizando nuestro sitio, usted acepta cumplir con estos términos y condiciones.</p>
+    <div class="modal-buttons">
+      <button onclick="aceptarModal('modal-terminos')">Aceptar</button>
+      <button onclick="rechazarModal('modal-terminos')">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Script del Footer -->
+<script src="JavaScript/Footer.js"></script>
+<script src="JavaScript/UneteLogic.js"></script>
+</body>
+
+</html>

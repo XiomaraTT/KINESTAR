@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINESTAR - Inicio</title>
+    <link rel="stylesheet" href="css/styleInicio.css">
+    <link rel="stylesheet" href="css/styleCartelera.css">
+    <link rel="stylesheet" href="css/styleProxEstreno.css">
+    <link rel="stylesheet" href="css/styleSnacks.css">
+    <link rel="stylesheet" href="css/styleContactanos.css">
+</head>
+
+<body>
+    <!-- Barra de navegación con logo -->
+    <nav>
+      <div class="logo">
+        <img src="img/logo.jpg" alt="Logo KINESTAR" width="120">
+      </div>
+
+      <div>
+        <ul class="menu">
+
+          <li class="submenu-hover">
+            <a href="#" class="icono-wrapper">
+              <img src="img/usuario.png" alt="Menú de usuario" class="icono-usuario">
+            </a>
+
+              <ul class="submenu">
+                <li><a href="Login.html">Iniciar sesión</a></li>
+                <li><a href="Registrate.html">Regístrate</a></li>
+              </ul>
+          </li>
+
+          <li><a href="Unete.html">Únete</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <!-- Imagen grande debajo del nav -->
+    <div class="hero-image">
+      <div class="carrusel">
+        <div class="imagenes" id="imagenes">
+          <img src="img/cine-moderno.jpg" alt="Imagen 1">
+          <img src="img/CinePrincipal.jpg" alt="Imagen 2">
+          <img src="img/cine-combos.jpg" alt="Imagen 3">
+        </div>
+        <button class="btn prev" onclick="moverIzquierda()">←</button>
+        <button class="btn next" onclick="moverDerecha()">→</button>
+      </div>
+    </div>
+
+    <!-- Menú inferior de navegación -->
+<nav class="nav-superior">
+  
+  <!-- Botón hamburguesa -->
+  <div class="bars" id="btn-inferior">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <ul class="menu" id="menu-inferior">
+    <li><a href="Inicio.html" class="active">Inicio</a></li>
+
+    <li class="submenu-hover">
+      <a href="#">Películas</a>
+      <ul class="submenu">
+        <li><a href="Cartelera.html">Cartelera</a></li>
+        <li><a href="ProximosEstrenos.html">Próximos Estrenos</a></li>
+      </ul>
+    </li>
+
+    <li><a href="Snacks.html">Snacks</a></li>
+    <li><a href="Nosotros.html">Nosotros</a></li>
+    <li><a href="Contactanos.html">Contáctanos</a></li>
+  </ul>
+</nav>
+
+
+    <!-- Contenido principal -->
+    <main>
+          <section class="experiencias-cine">
+              <div class="tipo-experiencia">
+                  <h2>Cine Convencional</h2></br>
+                  <img src="img/cine-convencional.jpg" alt="Cine Convencional">
+                  <p>Disfruta de las mejores películas en nuestras modernas salas equipadas con tecnología de última generación, sonido envolvente y butacas cómodas para una experiencia cinematográfica tradicional pero de alta calidad.</p>
+              </div>
+              
+              <div class="separador"></div>
+              
+              <div class="tipo-experiencia">
+                  <h2>En la Naturaleza</h2></br>
+                  <img src="img/cine-naturaleza.jpg" alt="Cine en la Naturaleza">
+                  <p>Vive una experiencia única con nuestro cine al aire libre, donde podrás disfrutar de tus películas favoritas bajo las estrellas, en entornos naturales especialmente acondicionados para tu comodidad.</p>
+              </div>
+          </section>
+
+          
+        
+          <section class="estructura">
+            <section class="promociones">
+              <section class="titulo">
+                <h2>🎬 Películas destacadas</h2>
+              </section>
+              <section class="cuadroDeImagenes">
+                <div class="division1">
+                        <div class="pelis">
+                            <a href="Cartelera.html#pElmalviveaqui">
+                              <img src="img/elmalviveaqui.jpg" alt="elmalviveaqui">
+                            </a>                            
+                        </div>
+                        <div class="pelis">
+                            <a href="Cartelera.html#pEscape">
+                              <img src="img/escape.jpg" alt="escape">
+                            </a>
+                        </div>
+                </div>
+                <div class="division2">
+                        <div class="pelis">
+                            <a href="Cartelera.html#pLaniñademisojos">
+                              <img src="img/laniñademisojos.jpg" alt="laniñademisojos">
+                            </a>
+                        </div>
+                        <div class="pelis">
+                            <a href="Cartelera.html#pFlow">
+                              <img src="img/flow.jpg" alt="flow">
+                            </a>
+                        </div>
+                        <div class="pelis">
+                            <a href="Cartelera.html#pYomeddine">
+                              <img src="img/yomeddine.jpg" alt="yomeddine">
+                            </a>
+                        </div>
+                </div>
+              </section>
+              <section class="peliculas">
+                  <div class="pelicula">
+                    <div class="info">
+                      <a href="Cartelera.html#pAnabelle">Annabelle</a>
+                      <span class="estrellas">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <a href="Cartelera.html#pAnabelle">
+                      <img src="img/annabelle.jpg" alt="Annabelle">
+                    </a>
+                  </div>
+            
+                  <div class="pelicula">
+                    <div class="info">
+                      <a href="Cartelera.html#pSonic">Sonic</a>
+                      <span class="estrellas">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <a href="Cartelera.html#pSonic">
+                      <img src="img/sonic.jpg" alt="Sonic">
+                    </a>
+                  </div>
+            
+                  <div class="pelicula">
+                    <div class="info">
+                      <a href="Cartelera.html#pOkja">Okja</a>
+                      <span class="estrellas">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <a href="Cartelera.html#pOkja">
+                      <img src="img/okja.jpg" alt="Okja">
+                    </a>
+                  </div>
+            
+                  <div class="pelicula">
+                    <div class="info">
+                      <a href="Cartelera.html#pMinecraft">Minecraft</a>
+                      <span class="estrellas">⭐⭐⭐⭐</span>
+                    </div>
+                    <a href="Cartelera.html#pMinecraft">
+                      <img src="img/minecraft.jpg" alt="Minecraft">
+                    </a>
+                  </div>
+            
+                  <div class="pelicula">
+                    <div class="info">
+                      <a href="Cartelera.html#pSlenderman">Slenderman</a>
+                      <span class="estrellas">⭐⭐⭐⭐</span>
+                    </div>
+                    <a href="Cartelera.html#pSlenderman">
+                      <img src="img/slenderman.jpg" alt="Slenderman">
+                    </a>
+                  </div>
+              </section>
+            
+
+              
+            </section>
+
+            <section class="sectorC">
+              <section class="titulo">
+                <h2>🍿 Combos</h2>
+              </section>
+              <section class="combos">
+                  <div class =tCombo>
+                    <h4>¡Arma tu combo y disfruta la experiencia completa! 🌟</h4></br>           
+                  </div>
+                  <ul class="promos">
+                      <li class="list">
+                          <a href="Snacks.html#cFamiliar"></br>Combo Familiar 👨‍👩‍👧‍👦</a></br>
+                          <a href="Snacks.html#cFamiliar">
+                            <img src="img/combofamiliar.jpg" alt="Combo Familiar">
+                          </a>
+                      </li>
+                      
+                      <div class="separador"></div>
+                      
+                      <li class="list">
+                          <a href="Snacks.html#cTerror"></br>Combo Terror 🎃</a></br>
+                          <a href="Snacks.html#cTerror">
+                            <img src="img/comboterror.jpg" alt="Combo de Terror">
+                          </a>
+                      </li>
+
+                      <div class="separador"></div>
+                      
+                      <li class="list">
+                          <a href="Snacks.html#cRomance"></br>Combo Romance 😍</a></br>
+                          <a href="Snacks.html#cRomance">
+                            <img src="img/comboromance.jpg" alt="Combo de Romance">
+                          </a>
+                      </li>
+
+                      <div class="separador"></div>
+                      
+                      <li class="list">
+                          <a href="Snacks.html#cAccion"></br>Combo Acción ⚔️</a></br>
+                          <a href="Snacks.html#cAccion">
+                            <img src="img/comboaccion.jpg" alt="Combo Acción">
+                          </a>
+                      </li>
+
+                      <div class="separador"></div>
+                      
+                      <li class="list">
+                          <a href="Snacks.html#cComedia"></br>Combo Comedia 🤣</a></br>
+                          <a href="Snacks.html#cComedia">
+                            <img src="img/imgcomedia.jpg" alt="Combo Comedia">
+                          </a>
+                      </li>
+                  </ul>
+              </section>
+            </section>
+  
+  
+              
+          </section>
+          
+    </main>
+
+ <!-- Footer -->
+  <footer>
+  <div class="footer-contenedor">
+    <p>&copy; 2025 El equipo de KINESTAR.</p>
+
+    <div class="footer-redes">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="img/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="img/ig.svg" alt="Instagram">
+      </a>
+      <a href="https://wa.me/51112345678" target="_blank">
+        <img src="img/whatsapp.svg" alt="Whatsapp">
+      </a>
+    </div>
+
+    <!--  Footer Links de Politicas y Termninos--->
+    <div class="footer-links">
+      <a href="#" onclick="abrirModal('modal-politica')">Política de Privacidad</a>
+      <a href="#" onclick="abrirModal('modal-terminos')">Términos y Condiciones</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal: Política de Privacidad -->
+<div id="modal-politica" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal-politica')">&times;</span>
+    <h2>Política de Privacidad</h2>
+    <p>En KINESTAR, respetamos y protegemos la privacidad de nuestros usuarios. 
+      Esta política describe cómo recopilamos, usamos y protegemos la información personal 
+      que usted nos proporciona a través de nuestro sitio web.</p>
+    <ul>
+      <li><strong>Recopilación de Datos:</strong> Podemos recopilar información como nombre, 
+        correo electrónico, número de teléfono y otros datos cuando usted los proporciona voluntariamente.</li>
+      <li><strong>Uso de Información:</strong> Utilizamos sus datos para responder a sus consultas,
+         brindarle nuestros servicios y enviarle comunicaciones importantes relacionadas con su interacción
+          con nosotros.</li>
+      <li><strong>Protección:</strong> Tomamos medidas razonables para proteger su información contra 
+        accesos no autorizados o divulgación.</li>
+      <li><strong>Cookies:</strong> Nuestro sitio puede utilizar cookies para mejorar la experiencia
+         del usuario.</li>
+    </ul>
+    <p>Al usar este sitio, usted acepta nuestra política de privacidad. Si tiene preguntas, puede contactarnos
+      en nuestro formulario de contacto.</p>
+    <div class="modal-buttons">
+      <button onclick="aceptarModal('modal-politica')">Aceptar</button>
+      <button onclick="rechazarModal('modal-politica')">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Términos y Condiciones -->
+<div id="modal-terminos" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal-terminos')">&times;</span>
+    <h2>Términos y Condiciones</h2>
+    <p>El acceso y uso del sitio web de KINESTAR están sujetos a los siguientes términos y condiciones:</p>
+    <ul>
+      <li><strong>Uso del Sitio:</strong> Usted se compromete a utilizar el sitio de manera legal y respetuosa.</li>
+      <li><strong>Propiedad Intelectual:</strong> Todo el contenido del sitio (textos, imágenes, logotipos) está protegido por derechos de autor y no puede ser utilizado sin permiso previo.</li>
+      <li><strong>Responsabilidad:</strong> KINESTAR no se hace responsable por daños derivados del uso o mal uso del sitio web.</li>
+      <li><strong>Modificaciones:</strong> Nos reservamos el derecho de actualizar estos términos en cualquier momento.</li>
+    </ul>
+    <p>Al continuar utilizando nuestro sitio, usted acepta cumplir con estos términos y condiciones.</p>
+    <div class="modal-buttons">
+      <button onclick="aceptarModal('modal-terminos')">Aceptar</button>
+      <button onclick="rechazarModal('modal-terminos')">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Botones flotantes de subir y bajar -->
+<div class="botones-scroll">
+  <button id="btn-subir" title="Ir arriba">⬆</button>
+  <button id="btn-bajar" title="Ir abajo">⬇</button>
+</div>
+
+
+<!-- Script del Footer -->
+<script src="JavaScript/Footer.js"></script>
+
+<script src="JavaScript/inicio.js"></script>
+
+<script src="JavaScript/botones.js"></script>
+
+</body>
+</html>

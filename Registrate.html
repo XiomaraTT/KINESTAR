@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+    <link rel="stylesheet" href="css/styleRegistrate.css">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Logo KINESTAR" width="120">
+        </div>
+        <div class="menu">
+            <a href="Inicio.html">Inicio</a>
+            <a href="Registrate.html">Regístrate</a>
+            <a href="Unete.html">Únete</a>
+        </div>
+    </nav>
+
+
+
+    <header>
+        <h1>Registrarse en KINESTAR</h1>
+        <p>Únete a nuestra comunidad y disfruta de los mejores estrenos</p>
+    </header>
+
+    <div class="registro-container">
+        <h2>Formulario de Registro</h2>
+        <form id="registerUserForm" action="#" method="post">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required
+                   pattern="[A-Za-záéíóúÁÉÍÓÚñÑ ]+" title="Solo se permiten letras y espacios">
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tuemail@cine.com" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Crea una contraseña" required>
+
+            <label for="confirmar-password">Confirmar Contraseña</label>
+            <input type="password" id="confirmar-password" name="confirmar-password" placeholder="Confirma tu contraseña" required>
+
+            <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="Login.html">Inicia sesión aquí</a></p>
+    </div>
+
+    <div id="alert-message" class="alert" style="display: none;"></div>
+
+<!-- Footer -->
+  <footer>
+  <div class="footer-contenedor">
+    <p>&copy; 2025 El equipo de KINESTAR.</p>
+
+    <div class="footer-redes">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="img/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="img/ig.svg" alt="Instagram">
+      </a>
+      <a href="https://wa.me/51112345678" target="_blank">
+        <img src="img/whatsapp.svg" alt="Whatsapp">
+      </a>
+    </div>
+
+    <!--  Footer Links de Politicas y Termninos--->
+    <div class="footer-links">
+      <a href="#" onclick="abrirModal('modal-politica')">Política de Privacidad</a>
+      <a href="#" onclick="abrirModal('modal-terminos')">Términos y Condiciones</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal fOOTER: Política de Privacidad -->
+<div id="modal-politica" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal-politica')">&times;</span>
+    <h2>Política de Privacidad</h2>
+    <p>En KINESTAR, respetamos y protegemos la privacidad de nuestros usuarios. 
+      Esta política describe cómo recopilamos, usamos y protegemos la información personal 
+      que usted nos proporciona a través de nuestro sitio web.</p>
+    <ul>
+      <li><strong>Recopilación de Datos:</strong> Podemos recopilar información como nombre, 
+        correo electrónico, número de teléfono y otros datos cuando usted los proporciona voluntariamente.</li>
+      <li><strong>Uso de Información:</strong> Utilizamos sus datos para responder a sus consultas,
+         brindarle nuestros servicios y enviarle comunicaciones importantes relacionadas con su interacción
+          con nosotros.</li>
+      <li><strong>Protección:</strong> Tomamos medidas razonables para proteger su información contra 
+        accesos no autorizados o divulgación.</li>
+      <li><strong>Cookies:</strong> Nuestro sitio puede utilizar cookies para mejorar la experiencia
+         del usuario.</li>
+    </ul>
+    <p>Al usar este sitio, usted acepta nuestra política de privacidad. Si tiene preguntas, puede contactarnos
+      en nuestro formulario de contacto.</p>
+    <div class="modal-buttons">
+      <button onclick="aceptarModal('modal-politica')">Aceptar</button>
+      <button onclick="rechazarModal('modal-politica')">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal FOOTER: Términos y Condiciones -->
+<div id="modal-terminos" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal-terminos')">&times;</span>
+    <h2>Términos y Condiciones</h2>
+    <p>El acceso y uso del sitio web de KINESTAR están sujetos a los siguientes términos y condiciones:</p>
+    <ul>
+      <li><strong>Uso del Sitio:</strong> Usted se compromete a utilizar el sitio de manera legal y respetuosa.</li>
+      <li><strong>Propiedad Intelectual:</strong> Todo el contenido del sitio (textos, imágenes, logotipos) está protegido por derechos de autor y no puede ser utilizado sin permiso previo.</li>
+      <li><strong>Responsabilidad:</strong> KINESTAR no se hace responsable por daños derivados del uso o mal uso del sitio web.</li>
+      <li><strong>Modificaciones:</strong> Nos reservamos el derecho de actualizar estos términos en cualquier momento.</li>
+    </ul>
+    <p>Al continuar utilizando nuestro sitio, usted acepta cumplir con estos términos y condiciones.</p>
+    <div class="modal-buttons">
+      <button onclick="aceptarModal('modal-terminos')">Aceptar</button>
+      <button onclick="rechazarModal('modal-terminos')">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Script del Footer -->
+<script src="JavaScript/Footer.js"></script>
+<script src="JavaScript/Registro-Login.js"></script> </body>
+  
+</body>
+
+</html>

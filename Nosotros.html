@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="css/styleNosotros.css">
+</head>
+
+
+
+<body>
+ <!-- Navegador -->
+<nav class="nav-superior">
+  <!-- Logo -->
+  <div class="logo">
+    <img src="img/logo.jpg" alt="Logo KINESTAR" width="120">
+  </div>
+
+  <!-- Botón hamburguesa -->
+  <div class="bars" id="btn-hamburguesa-superior">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+ <!-- Menú -->
+  <ul class="menu" id="menu-superior">
+    <li><a href="Inicio.html">Inicio</a></li>
+
+    <li class="submenu-hover">
+      <a href="#">Películas</a>
+      <ul class="submenu">
+        <li><a href="Cartelera.html">Cartelera</a></li>
+        <li><a href="ProximosEstrenos.html">Próximos Estrenos</a></li>
+      </ul>
+    </li>
+
+    <li><a href="Snacks.html" >Snacks</a></li>
+    <li><a href="Nosotros.html" class="active">Nosotros</a></li>
+    <li><a href="Contactanos.html">Contáctanos</a></li>
+  </ul>
+</nav>
+
+<section class="nosotros">
+  <div class="nosotros-contenido">
+    <div class="texto">
+      <h2>Nosotros</h2>
+      <p>
+        En Kinestar, creemos que el cine es más que entretenimiento: es una experiencia que 
+        conecta personas, despierta emociones y crea recuerdos. Por eso, trabajamos cada día para que la magia del cine comience mucho antes de que se apaguen las luces en la sala.
+      </p>
+      <p>
+        Somos un equipo apasionado por el séptimo arte y especializado en ofrecer soluciones
+        eficientes para la gestión de ventas dentro del mundo cinematográfico.
+        Desde la adquisición de entradas hasta la planificación de funciones y promociones, 
+        nuestro objetivo es hacer que cada paso sea simple, rápido y seguro para nuestros usuarios.
+      </p>
+      <p>
+        Con una plataforma intuitiva y en constante evolución, facilitamos la administración 
+        comercial de espacios cinematográficos, mejoramos la experiencia del cliente y apoyamos a 
+        las salas a maximizar su potencial.
+      </p>
+      <p>
+        Porque amamos el cine tanto como tú, y queremos que vivirlo sea siempre una experiencia 
+        sin complicaciones.
+      </p>
+    </div>
+
+    <div class="imagen">
+      <img src="img/NosotrosImag.jpg" alt="Ilustración de cine">
+    </div>
+  </div>
+</section>
+
+
+
+
+  <h2>Nuestros Pilares</h2>
+
+  <div class="tarjetas">
+
+    <section class="tarjeta">
+
+      <section class="cara frente">
+        <h3>Misión</h3>
+          <div class="icono">🎯</div>
+
+      </section>
+        <section class="cara trasera">
+          <h3>Misión</h3>
+          <p>Transformar la experiencia cinematográfica mediante soluciones innovadoras que simplifiquen el acceso al cine,
+            conectando a las personas con el arte cinematográfico de manera accesible y memorable.</p>        
+        </section>
+      </section>
+
+      <section class="tarjeta">
+          <section class="cara frente">
+            <h3>Visión</h3>
+            <div class="icono">🔭</div>
+          </section>
+
+          <section class="cara trasera">
+            <h3>Visión</h3>
+            <p>Ser líderes en innovación tecnológica para la industria cinematográfica, reconocidos por nuestra capacidad 
+              de crear experiencias únicas que fusionen la magia del cine con la comodidad digital.</p>
+          </section>
+      </section>
+  </div>   
+<!-- Footer -->
+  <footer>
+  <div class="footer-contenedor">
+    <p>&copy; 2025 El equipo de KINESTAR.</p>
+
+    <div class="footer-redes">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="img/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="img/ig.svg" alt="Instagram">
+      </a>
+      <a href="https://wa.me/51112345678" target="_blank">
+        <img src="img/whatsapp.svg" alt="Whatsapp">
+      </a>
+    </div>
+
+    <!--  Footer Links de Politicas y Termninos--->
+    <div class="footer-links">
+      <a href="#" onclick="abrirModal('modal-politica')">Política de Privacidad</a>
+      <a href="#" onclick="abrirModal('modal-terminos')">Términos y Condiciones</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal: Política de Privacidad -->
+<div id="modal-politica" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal-politica')">&times;</span>
+    <h2>Política de Privacidad</h2>
+    <p>En KINESTAR, respetamos y protegemos la privacidad de nuestros usuarios. 
+      Esta política describe cómo recopilamos, usamos y protegemos la información personal 
+      que usted nos proporciona a través de nuestro sitio web.</p>
+    <ul>
+      <li><strong>Recopilación de Datos:</strong> Podemos recopilar información como nombre, 
+        correo electrónico, número de teléfono y otros datos cuando usted los proporciona voluntariamente.</li>
+      <li><strong>Uso de Información:</strong> Utilizamos sus datos para responder a sus consultas,
+         brindarle nuestros servicios y enviarle comunicaciones importantes relacionadas con su interacción
+          con nosotros.</li>
+      <li><strong>Protección:</strong> Tomamos medidas razonables para proteger su información contra 
+        accesos no autorizados o divulgación.</li>
+      <li><strong>Cookies:</strong> Nuestro sitio puede utilizar cookies para mejorar la experiencia
+         del usuario.</li>
+    </ul>
+    <p>Al usar este sitio, usted acepta nuestra política de privacidad. Si tiene preguntas, puede contactarnos
+      en nuestro formulario de contacto.</p>
+    <div class="modal-buttons">
+      <button onclick="aceptarModal('modal-politica')">Aceptar</button>
+      <button onclick="rechazarModal('modal-politica')">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Términos y Condiciones -->
+<div id="modal-terminos" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal-terminos')">&times;</span>
+    <h2>Términos y Condiciones</h2>
+    <p>El acceso y uso del sitio web de KINESTAR están sujetos a los siguientes términos y condiciones:</p>
+    <ul>
+      <li><strong>Uso del Sitio:</strong> Usted se compromete a utilizar el sitio de manera legal y respetuosa.</li>
+      <li><strong>Propiedad Intelectual:</strong> Todo el contenido del sitio (textos, imágenes, logotipos) está protegido por derechos de autor y no puede ser utilizado sin permiso previo.</li>
+      <li><strong>Responsabilidad:</strong> KINESTAR no se hace responsable por daños derivados del uso o mal uso del sitio web.</li>
+      <li><strong>Modificaciones:</strong> Nos reservamos el derecho de actualizar estos términos en cualquier momento.</li>
+    </ul>
+    <p>Al continuar utilizando nuestro sitio, usted acepta cumplir con estos términos y condiciones.</p>
+    <div class="modal-buttons">
+      <button onclick="aceptarModal('modal-terminos')">Aceptar</button>
+      <button onclick="rechazarModal('modal-terminos')">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Botones flotantes de subir y bajar -->
+<div class="botones-scroll">
+  <button id="btn-subir" title="Ir arriba">⬆</button>
+  <button id="btn-bajar" title="Ir abajo">⬇</button>
+</div>
+
+<!-- Script del Footer -->
+<script src="JavaScript/Footer.js"></script>
+<script src="JavaScript/boton hamburguesa.js"></script>
+<script src="JavaScript/botones.js"></script>
+</body>
+</html>

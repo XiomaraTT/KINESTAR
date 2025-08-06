@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera</title>
+    <link rel="stylesheet" href="css/styleCartelera.css">
+</head>
+<body>
+
+    <!-- Navegador -->
+<nav class="nav-superior">
+  <!-- Logo -->
+  <div class="logo">
+    <img src="img/logo.jpg" alt="Logo KINESTAR" width="120">
+  </div>
+
+  <!-- Botón hamburguesa -->
+  <div class="bars" id="btn-hamburguesa-superior">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <!-- Menú -->
+  <ul class="menu" id="menu-superior">
+    <li><a href="Inicio.html">Inicio</a></li>
+
+    <li class="submenu-hover">
+      <a href="#" class="active">Películas</a>
+      <ul class="submenu">
+        <li><a href="Cartelera.html">Cartelera</a></li>
+        <li><a href="ProximosEstrenos.html">Próximos Estrenos</a></li>
+      </ul>
+    </li>
+
+    <li><a href="Snacks.html">Snacks</a></li>
+    <li><a href="Nosotros.html">Nosotros</a></li>
+    <li><a href="Contactanos.html">Contáctanos</a></li>
+  </ul>
+</nav>
+
+
+
+    <!-- Contenido principal -->
+    <main>
+    
+        <h1 class="titulo-cartelera">🎬 Cartelera</h1>
+
+
+        <!-- Estrenos -->
+        <section class="estrenos">
+        
+                <div class="pelicula" id="pAnabelle">
+                    <a href="peliculasHtml/Annabelle.html">
+                        <img src="img/annabelle.jpg" alt="Póster de Película 1">
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                            <h3 class="sinopsis-title">ANNABELLE</h3>
+                                <p class="sinopsis">Cuando un ritual oscuro libera a Annabelle de su prisión sagrada, 
+                                    el mal desatado comienza a poseer cuerpos humanos. Judy Warren, ahora adulta, 
+                                    deberá detenerla antes de que complete el conjuro que abriría las puertas del 
+                                    infierno.
+                                </p>
+                                <div class="boton-comprar-container">
+                                    <button class="buy-btn" onclick="abrirVentana('annabelle')">🎫 Comprar Entradas</button>
+                                </div>
+                            </div>        
+                        </div>
+                    </a>
+                </div>
+        
+                <div class="pelicula" id="pElmalviveaqui">
+                    <a href="peliculasHtml/Elmalviveaqui.html">
+                        <img src="img/elmalviveaqui.jpg" alt="Póster de Película 2">
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                                <h3 class="sinopsis-title">EL MAL VIVE AQUI</h3>
+                                <p class="sinopsis">Con el objetivo de cumplir un reto de Internet, una pareja decide 
+                                    entrar en una mansión encantada y asustar a sus nuevos residentes. Pero lo que 
+                                    comienza como una simple broma se convierte en un peligroso juego de vida o muerte.
+                                </p>
+                                <div class="boton-comprar-container">
+                                    <button class="buy-btn" onclick="abrirVentana('elmalviveaqui')">🎫 Comprar Entradas</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pelicula" id="pEscape">
+                    <a href="peliculasHtml/Escape.html">
+                        <img src="img/escape.jpg" alt="Póster de Película 3">
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                                <h3 class="sinopsis-title">ESCAPE</h3>
+                                <p class="sinopsis">N. es un hombre estropeado, algo no va bien en su interior. 
+                                    N. no quiere tomar una sola decisión más, solo apearse del mundo. Dejar de 
+                                    tener opciones. El psicólogo a quien visita no sabe cómo abordarlo, tampoco 
+                                    su hermana, que intenta apoyarlo sin frutos.
+                                </p>
+                                <div class="boton-comprar-container">
+                                    <button class="buy-btn" onclick="abrirVentana('escape')">🎫 Comprar Entradas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+              
+
+                <div class="pelicula" id="pFlow">
+                    <a href="peliculasHtml/Flow.html">
+                        <img src="img/flow.jpg" alt="Póster de Película 4">
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                                <h3 class="sinopsis-title">FLOW</h3>
+                                <p class="sinopsis">El gato es un animal solitario, pero cuando su hogar es 
+                                    devastado por una gran inundación, encuentra refugio en un barco habitado 
+                                    por varias especies y tendrá que trabajar en equipo con ellas, a pesar 
+                                    de sus diferencias.
+                                </p>
+                                <div class="boton-comprar-container">
+                                    <button class="buy-btn" onclick="abrirVentana('flow')">🎫 Comprar Entradas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pelicula" id="pLaniñademisojos">
+                    <a href="peliculasHtml/Laniñademisojos.html">
+                        <img src="img/laniñademisojos.jpg" alt="Póster de Película 5">
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                                <h3 class="sinopsis-title">LA NIÑA DE MIS OJOS</h3>
+                                <p class="sinopsis">Jin-woo y sus amigos atraviesan los altibajos de la 
+                                    adolescencia. Sin embargo, todos comparten una fascinación por Seon-ah, 
+                                    la elegante y hermosa estudiante modelo que parece un sueño inalcanzable, 
+                                    a pesar de estar en la misma clase. A pesar de sus diferentes personalidades 
+                                    y niveles académicos, Jin-woo y Seon-ah forman un vínculo estrecho al apreciar 
+                                    las cualidades únicas de cada uno. Su relación atraviesa fases desafiantes de 
+                                    la escuela secundaria hasta los inevitables cambios de la vida adulta.
+                                </p>
+                                <div class="boton-comprar-container">
+                                    <button class="buy-btn" onclick="abrirVentana('laniñademisojos')">🎫 Comprar Entradas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pelicula" id="pMinecraft">
+                    <a href="peliculasHtml/Minecraft.html">
+                        <img src="img/minecraft.jpg" alt="Póster de Película 6">    
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                                <h3 class="sinopsis-title">MINECRAFT</h3>
+                                    <p class="sinopsis">Cuatro inadaptados se encuentran luchando con problemas 
+                                        ordinarios cuando de repente son arrastrados a través de un misterioso 
+                                        portal al Overworld: una extraña tierra cuadrada que prospera con la 
+                                        imaginación. Para regresar a casa, tendrán que dominar este mundo (y 
+                                        protegerlo de cosas malignas como los Piglins y los Zombis) mientras emprenden 
+                                        una búsqueda mágica con un inesperado experto creador, Steve. Juntos, 
+                                        su aventura desafiará a los cinco a ser audaces y reconectarse con las 
+                                        cualidades que hacen a cada uno de ellos creativamente únicos...
+                                    </p>
+                                    <div class="boton-comprar-container">
+                                        <button class="buy-btn" onclick="abrirVentana('minecraft')">🎫 Comprar Entradas</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pelicula" id="pOkja">
+                    <a href="peliculasHtml/Okja.html">
+                        <img src="img/okja.jpg" alt="Póster de Película 7">
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                                <h3 class="sinopsis-title">OKJA</h3>
+                                <p class="sinopsis">La pequeña Mija es una joven que ha criado durante 10 años a 
+                                    un gigantesco cerdo, Okja, en su granja en la montaña. Pero todo cambia cuando 
+                                    la multinacional familiar se intenta llevar a Okja a Nueva York para convertirlo 
+                                    comida.
+                                </p>
+                                <div class="boton-comprar-container">
+                                        <button class="buy-btn" onclick="abrirVentana('okja')">🎫 Comprar Entradas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pelicula" id="pSlenderman">
+                    <a href="peliculasHtml/Slenderman.html">
+                        <img src="img/slenderman.jpg" alt="Póster de Película 8">
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                                <h3 class="sinopsis-title">SLENDERMAN</h3>
+                                <p class="sinopsis">Un grupo de amigas descubre en internet a una extraña y espeluznante 
+                                    criatura conocida como slender man. El misterioso ser, de origen desconocido y 
+                                    aterradores poderes, despierta la curiosidad y el morbo de las jóvenes y deciden 
+                                    invocarlo...
+                                </p>
+                                <div class="boton-comprar-container">
+                                        <button class="buy-btn" onclick="abrirVentana('slenderman')">🎫 Comprar Entradas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pelicula">
+                    <a href="peliculasHtml/Thechosen.html">
+                        <img src="img/thechosen.jpg" alt="Póster de Película 9">
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                                <h3 class="sinopsis-title">THE CHOSEN</h3>
+                                <p class="sinopsis">Un pescador endeudado, una mujer maltratada, un joven marginado que 
+                                    se dedica a recaudar impuestos para los romanos y un mandatario judío que se cuestiona 
+                                    todo en lo que había creído hasta ahora son los protagonistas de esta historia que se 
+                                    desarrolla en Judea, en el siglo I.
+                                </p>
+                                <div class="boton-comprar-container">
+                                        <button class="buy-btn" onclick="abrirVentana('thechosen')">🎫 Comprar Entradas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pelicula">
+                    <a href="peliculasHtml/Terrtemoto.html">
+                        <img src="img/terremoto.jpg" alt="Póster de Película 10">
+                            <div class="overlay">
+                                <div class="sinopsis-container">
+                                    <h3 class="sinopsis-title">TERREMOTO MAGNITUD 9.0</h3>
+                                    <p class="sinopsis">Después de que un gran terremoto sumerge un hotel, un joven arquitecto 
+                                        debe superar todas las dificultades para salvar a su novia embarazada antes de que la 
+                                        estructura se derrumbe...
+                                    </p>
+                                <div class="boton-comprar-container">
+                                        <button class="buy-btn" onclick="abrirVentana('terremoto')">🎫 Comprar Entradas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pelicula" id="pSonic">
+                    <a href="peliculasHtml/Sonic.html">
+                        <img src="img/sonic.jpg" alt="Póster de Película 11">
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                                <h3 class="sinopsis-title">SONIC</h3>
+                                <p class="sinopsis">Sonic intenta navegar por las complejidades de la vida en la Tierra con 
+                                    su nuevo mejor amigo, un humano llamado Tom Wachowski. Pronto deben unir fuerzas para 
+                                    evitar que el malvado Dr. Robotnik capture a Sonic y use sus poderes para dominar el mundo.
+                                </p>
+                                <div class="boton-comprar-container">
+                                        <button class="buy-btn" onclick="abrirVentana('sonic')">🎫 Comprar Entradas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pelicula" id="pYomeddine">
+                    <a href="peliculasHtml/Yomeddine.html">
+                        <img src="img/yomeddine.jpg" alt="Póster de Película 12">
+                        <div class="overlay">
+                            <div class="sinopsis-container">
+                                <h3 class="sinopsis-title">YOMEDDINE</h3>
+                                <p class="sinopsis">Beshay nunca ha salido de la colonia de leprosos en la que le abandonaron 
+                                    siendo un niño. Tras la muerte de su mujer, decide coger sus escasas pertenencias e ir en 
+                                    busca de sus raíces junto a Obama, un joven huérfano que se une a él en el camino. Beshay 
+                                    cruza Egipto plantándole cara al mundo y superando todas las dificultades, pero también 
+                                    disfrutando de los buenos momentos que le depara el viaje.
+                                </p>
+                                <div class="boton-comprar-container">
+                                        <button class="buy-btn" onclick="abrirVentana('yomeddine')">🎫 Comprar Entradas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div id="ventana" class="modal">
+                <div class="modal-content">
+                    <h2>Selecciona tus asientos</h2>
+                    <div id="seatingArea">
+                    <div id="asientos"></div>
+                    </div>
+                    <p>Total seleccionados: <span id="cantidad">0</span></p>
+                    <button id="continueBtn" class="modal-btn">Continuar</button>
+                    <button id="cancelar" class="modal-btn">Cancelar</button> 
+
+                </div>
+                </div>
+
+                <!-- Sección de pago con QR --> 
+                <div id="pagoQR" class="pago-qr">
+                <h3>Escanea este código QR para realizar el pago</h3>
+                <img src="img/qr.jpg" alt="Código QR para pagar" class="qr-img" />
+                <p>Después del pago, recibirás tu entrada en el correo registrado.</p>
+                </div>
+
+  
+
+        </section>
+
+
+
+        <button id="btnHorario">🕒 Ver Horarios</button>
+
+
+        
+        <!-- Horarios -->
+        <section id="horarios" class="horarios-container" style="display: none;">
+            
+            <div class="horario">
+                
+                <table>
+                    <caption> Sem 26/05 al 31/05 </caption>
+                    <thead>
+                        <tr>
+                            <th> HORA </th>
+                            <th> LUNES </th>
+                            <th> MARTES </th>
+                            <th> MIÉRCOLES</th>
+                            <th> JUEVES </th>
+                            <th> VIERNES </th>
+                            <th> SÁBADO </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                        <tr>
+                            <th> 1:00 AM </th>
+                            <td class="Slenderman">Slenderman (sala 4)</td>
+                            <td class="TheMonkey">The Monkey (sala 6)</td>
+                            <td class="EMVA">El mal vive aquí (sala 6)</td>
+                            <td class="Escape">Escape (sala 7)</td>
+                            <td class="TM9">Terremoto Magnitud 9.0 (sala 2)</td>
+                            <td class="ND" rowspan="15"></td>
+
+                        </tr>
+
+                        <tr>
+                            <th> 2:00 AM </th>
+                            <td class="Escape">Escape (sala 1)</td>
+                            <td class="Annabelle5">Annabelle 5 (sala 3)</td>
+                            <td class="Slenderman">Slenderman (sala 2)</td>
+                            <td class="Annabelle5">Annabelle 5 (sala 1)</td>
+                            <td class="Slenderman">Slenderman (sala 7)</td>
+                        </tr>
+                        
+                        <tr>
+                            <th> 3:00 AM </th>
+                            <td class="TM9">Terremoto Magnitud 9.0 (sala 2)</td>
+                            <td class="Escape">Escape (sala 7)</td>
+                            <td class="Slenderman">Slenderman (sala 6)</td>
+                            <td class="TheMonkey">The Monkey (sala 7)</td>
+                            <td class="EMVA">El mal vive aquí (sala 6)</td>
+                        </tr>
+                        
+                        <tr>               
+                            <th> 4:00 AM </th>
+                            <td class="ND" colspan="5" rowspan="6"></td>
+                        </tr>
+
+                        <tr>
+                            <th> 5:00 AM </th>
+                        </tr>
+                        
+                        <tr>
+                            <th> 6:00 AM </th>
+                        </tr>
+                        
+                        <tr>
+                            <th> 7:00 AM </th>
+                        </tr>
+
+                        <tr>
+                            <th> 8:00 AM </th>
+                        </tr>
+
+                        <tr>
+                            <th> 9:00 AM </th>
+                        </tr>
+
+                        <tr>
+                            <th> 10:00 AM </th>
+                            <td class="LNDMO">La niña de mis ojos (sala 1)</td>
+                            <td class="Yomeddine">Yomeddine (sala 6)</td>
+                            <td class="Escape">Escape (sala 7)</td>
+                            <td class="TM9">Terremoto Magnitud 9.0 (sala 2)</td>
+                            <td class="LNDMO">La niña de mis ojos (sala 1)</td>
+                        </tr>
+
+                        <tr>
+                            <th> 11:00 AM </th>
+                            <td class="Yomeddine">Yomeddine (sala 6)</td>
+                            <td class="TM9">Terremoto Magnitud 9.0 (sala 3)</td>
+                            <td class="Yomeddine">Yomeddine (sala 6)</td>
+                            <td class="LNDMO">La niña de mis ojos (sala 6)</td>
+                            <td class="Yomeddine">Yomeddine (sala 6)</td>
+                        </tr>
+
+                        <tr>
+                            <th> 12:00 PM </th>
+                            <td class="ND" colspan="5" rowspan="4"></td>
+                        </tr>
+
+                        <tr>
+                            <th> 13:00 PM </th>
+                        </tr>
+
+                        <tr>
+                            <th> 14:00 PM </th>
+                        </tr>
+
+                        <tr>
+                            <th> 15:00 PM </th>
+                        </tr>
+
+                        <tr>
+                            <th> 16:00PM </th>
+                            <td class="Okja">Okja (sala 1)</td>
+                            <td class="Yomeddine">Yomeddine (sala 6)</td>
+                            <td class="Yomeddine">Yomeddine (sala 6)</td>
+                            <td class="Flow">Flow (sala 1)</td>
+                            <td class="LNDMO">La niña de mis ojos (sala 7)</td>
+                            <td class="Flow">Flow (sala 5)</td>
+                        </tr>
+
+                        <tr>
+                            <th> 17:00PM </th>
+                            <td class="Sonic3">Sonic 3 (sala 3)</td>
+                            <td class="Minecraft">Minecraft (sala 4)</td>
+                            <td class="TheChosen">The Chosen (sala 1)</td>
+                            <td class="Okja">Okja (sala 7)</td>
+                            <td class="Sonic3">Sonic 3 (sala 3)</td>
+                            <td class="Flow">Flow (sala 7)</td>
+                        </tr>
+
+                        <tr>
+                            <th> 18:00PM </th>
+                            <td class="Sonic3">Sonic 3 (sala 4)</td>
+                            <td class="LNDMO">La niña de mis ojos (sala 3)</td>
+                            <td class="Sonic3">Sonic 3 (sala 7)</td>
+                            <td class="LNDMO">La niña de mis ojos (sala 1)</td>
+                            <td class="Minecraft">Minecraft (sala 6)</td>
+                            <td class="Okja">Okja (sala 4)</td>
+                        </tr>
+
+                        <tr>
+                            <th> 19:00PM </th>
+                            <td class="TheChosen">The Chosen (sala 7)</td>
+                            <td class="Flow">Flow (sala 2)</td>
+                            <td class="Sonic3">Sonic 3 (sala 4)</td>
+                            <td class="Minecraft">Minecraft (sala 2)</td>
+                            <td class="TheChosen">The Chosen (sala 1)</td>
+                            <td class="TM9">Terremoto Magnitud 9.0 (sala 2)</td>
+                        </tr>
+
+                        <tr>
+                            <th> 20:00PM </th>
+                            <td class="TheMonkey">The Monkey (sala 5)</td>
+                            <td class="Okja">Okja (sala 5)</td>
+                            <td class="Minecraft">Minecraft (sala 2)</td>
+                            <td class="Minecraft">Minecraft (sala 3)</td>
+                            <td class="EMVA">El mal vive aquí (sala 7) </td>
+                            <td class="LNDMO">La niña de mis ojos (sala 5)</td>
+                        </tr>
+
+                        <tr>
+                            <th> 21:00PM </th>
+                            <td class="TheMonkey">The Monkey (sala 6)</td>
+                            <td class="EMVA">El mal vive aquí (sala 6)</td>
+                            <td class="TheMonkey">The Monkey (sala 7)</td>
+                            <td class="Escape">Escape (sala 6)</td>
+                            <td class="Annabelle5">Annabelle 5 (sala 3)</td>
+                            <td class="TheChosen">The Chosen (sala 1)</td>
+                        </tr>
+
+                        <tr>
+                            <th> 22:00PM </th>
+                            <td class="ND" colspan="5" rowspan="6"></td>
+                            <td class="Slenderman">Slenderman (sala 2)</td>
+                        </tr>
+
+                        <tr>
+                            <th> 23:00 AM </th>
+                            <td class="Slenderman">Slenderman (sala 3)</td>
+                        </tr>
+
+                        <tr>
+                            <th> 24:00 AM </th>
+                            <td class="Annabelle5">Annabelle 5 (sala 4)</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+        </section>       
+    </main>
+
+<!-- Footer -->
+  <footer>
+  <div class="footer-contenedor">
+    <p>&copy; 2025 El equipo de KINESTAR.</p>
+
+    <div class="footer-redes">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="img/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="img/ig.svg" alt="Instagram">
+      </a>
+      <a href="https://wa.me/51112345678" target="_blank">
+        <img src="img/whatsapp.svg" alt="Whatsapp">
+      </a>
+    </div>
+
+    <!--  Footer Links de Politicas y Termninos--->
+    <div class="footer-links">
+      <a href="#" onclick="abrirModal('modal-politica')">Política de Privacidad</a>
+      <a href="#" onclick="abrirModal('modal-terminos')">Términos y Condiciones</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal: Política de Privacidad -->
+<div id="modal-politica" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal-politica')">&times;</span>
+    <h2>Política de Privacidad</h2>
+    <p>En KINESTAR, respetamos y protegemos la privacidad de nuestros usuarios. 
+      Esta política describe cómo recopilamos, usamos y protegemos la información personal 
+      que usted nos proporciona a través de nuestro sitio web.</p>
+    <ul>
+      <li><strong>Recopilación de Datos:</strong> Podemos recopilar información como nombre, 
+        correo electrónico, número de teléfono y otros datos cuando usted los proporciona voluntariamente.</li>
+      <li><strong>Uso de Información:</strong> Utilizamos sus datos para responder a sus consultas,
+         brindarle nuestros servicios y enviarle comunicaciones importantes relacionadas con su interacción
+          con nosotros.</li>
+      <li><strong>Protección:</strong> Tomamos medidas razonables para proteger su información contra 
+        accesos no autorizados o divulgación.</li>
+      <li><strong>Cookies:</strong> Nuestro sitio puede utilizar cookies para mejorar la experiencia
+         del usuario.</li>
+    </ul>
+    <p>Al usar este sitio, usted acepta nuestra política de privacidad. Si tiene preguntas, puede contactarnos
+      en nuestro formulario de contacto.</p>
+    <div class="modal-buttons">
+      <button onclick="aceptarModal('modal-politica')">Aceptar</button>
+      <button onclick="rechazarModal('modal-politica')">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Términos y Condiciones -->
+<div id="modal-terminos" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('modal-terminos')">&times;</span>
+    <h2>Términos y Condiciones</h2>
+    <p>El acceso y uso del sitio web de KINESTAR están sujetos a los siguientes términos y condiciones:</p>
+    <ul>
+      <li><strong>Uso del Sitio:</strong> Usted se compromete a utilizar el sitio de manera legal y respetuosa.</li>
+      <li><strong>Propiedad Intelectual:</strong> Todo el contenido del sitio (textos, imágenes, logotipos) está protegido por derechos de autor y no puede ser utilizado sin permiso previo.</li>
+      <li><strong>Responsabilidad:</strong> KINESTAR no se hace responsable por daños derivados del uso o mal uso del sitio web.</li>
+      <li><strong>Modificaciones:</strong> Nos reservamos el derecho de actualizar estos términos en cualquier momento.</li>
+    </ul>
+    <p>Al continuar utilizando nuestro sitio, usted acepta cumplir con estos términos y condiciones.</p>
+    <div class="modal-buttons">
+      <button onclick="aceptarModal('modal-terminos')">Aceptar</button>
+      <button onclick="rechazarModal('modal-terminos')">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Botones flotantes de subir y bajar -->
+<div class="botones-scroll">
+  <button id="btn-subir" title="Ir arriba">⬆</button>
+  <button id="btn-bajar" title="Ir abajo">⬇</button>
+</div>
+
+<!-- Script del Footer -->
+<script src="JavaScript/Footer.js"></script>
+<script src="JavaScript/Cartelera.js"></script>
+<script src="JavaScript/boton hamburguesa.js"></script>
+<script src="JavaScript/botones.js"></script>
+</body>
+
+</html>
